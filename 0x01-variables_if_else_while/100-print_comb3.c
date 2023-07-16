@@ -1,30 +1,28 @@
 #include <stdio.h>
 /**
- * main -Entry point
- * Description: 'Print combs3'
- * Return: always 0
- */int man(void)
-{
-	int i;
-	int j;
+ * main - Entry point
+ * Return: 0 (successful)
+ * Description: double combination
+*/
 
-	for (i = 0 ; i < 10 ; i++)
+int main(void)
+{
+	int i, j;
+
+	for (i = 0; i < 9; i++)
 	{
-		for (j = 1 ; j < 10 ; j++)
+		for (j = i + 1; j < 10; j++)
 		{
-			if (i < j && i != j)
+			putchar (i + '0');
+			putchar (j + '0');
+
+			if (i != 8 || j != 9)
 			{
-				putchar(i + '0');
-				putchar(j + '0');
-				if (i + j != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
 	putchar('\n');
 	return (0);
 }
-
